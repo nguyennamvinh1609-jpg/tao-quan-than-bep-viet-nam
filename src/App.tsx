@@ -274,13 +274,13 @@ export default function App() {
                   詳細を読む / Đọc chi tiết trong sách
                 </div>
               </div>
-              <div className="h-96 md:h-auto relative">
+              <div className="min-h-[400px] md:min-h-[600px] relative bg-gray-50">
                 <img 
                   src={t.overview.sections[activeSection as keyof typeof t.overview.sections].image} 
                   alt="Section preview" 
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain p-4"
                   onError={(e) => {
-                    e.currentTarget.src = `https://picsum.photos/seed/${activeSection}/800/600`;
+                    e.currentTarget.src = `https://picsum.photos/seed/${activeSection}/800/1000`;
                   }}
                   referrerPolicy="no-referrer"
                 />
