@@ -11,7 +11,7 @@ export const CONTENT: Record<'jp' | 'vn', SiteContent> = {
     },
     hero: {
       title: "ベトナムの竈神",
-      subtitle: "Thần Bếp Việt Nam",
+      subtitle: "Thần Bếp Việt Nam - Ông Táo",
       group: "第3グループ",
       description: "ベトナムの伝統的なオンタオ（竈神）信仰を、視覚的かつエレガントに紹介するフリップブック・プロジェクト。",
       readButton: "フリップブックを読む",
@@ -24,30 +24,29 @@ export const CONTENT: Record<'jp' | 'vn', SiteContent> = {
     overview: {
       title: "本の構成",
       sections: {
-        intro: {
-          title: "はじめに",
-          summary: "ベトナムの家族の暮らし、毎日の食事、そして火のある台所から生まれた物語の序章。オンタオが家族を見守る存在であることを紹介します。",
-          image: "/intro.png",
-        },
         origin: {
-          title: "起源・伝来",
+          title: "第１章 起源・伝来",
           summary: "人類の最も原始的な「火への信仰」から、中国の竈君信仰との融合、そしてベトナム独自の発展を遂げた歴史を紐解きます。",
           image: "/origin.png",
+          link: "https://heyzine.com/flip-book/cadce47698.html#page/4",
         },
         legends: {
           title: "伝説と文化的価値",
           summary: "「二柱の男神と一柱の女神」の切なくも温かい伝説。夫婦の強い絆と、ベトナム人が大切にする『情』の精神を解説します。",
           image: "/legends.png",
+          link: "https://heyzine.com/flip-book/cadce47698.html#page/12",
         },
         rituals: {
-          title: "北部・中部・南部の儀礼",
+          title: "第２章 北部・中部・南部の儀礼",
           summary: "地域ごとに異なるオンタオの見送り方. 北部の鯉、中部の紙の馬、南部の甘い供物など、多様な文化の形を比較します。",
           image: "/rituals.png",
+          link: "https://heyzine.com/flip-book/cadce47698.html#page/22",
         },
         contemporary: {
-          title: "現代社会におけるオンタオ",
+          title: "第３章 現代社会におけるオンタオ",
           summary: "都市化やデジタル化が進む現代において、オンタオ信仰がどのように形を変え、今もなお家族の絆として息づいているかを探ります。",
           image: "/modern.png",
+          link: "https://heyzine.com/flip-book/cadce47698.html#page/42",
         },
       },
     },
@@ -85,7 +84,7 @@ export const CONTENT: Record<'jp' | 'vn', SiteContent> = {
     },
     hero: {
       title: "Thần Bếp Việt Nam",
-      subtitle: "ベトナムの竈神",
+      subtitle: "ベトナムの竈神 - Ông Táo",
       group: "Nhóm 3",
       description: "Dự án sách flipbook giới thiệu văn hóa tín ngưỡng Táo Quân của Việt Nam một cách trực quan và tinh tế.",
       readButton: "Đọc Flipbook",
@@ -98,30 +97,29 @@ export const CONTENT: Record<'jp' | 'vn', SiteContent> = {
     overview: {
       title: "Cấu trúc cuốn sách",
       sections: {
-        intro: {
-          title: "Lời nói đầu",
-          summary: "Chương mở đầu về những câu chuyện sinh ra từ cuộc sống gia đình, bữa ăn hàng ngày và bếp lửa. Giới thiệu Ông Táo là người bảo vệ gia đình.",
-          image: "/intro.png",
-        },
         origin: {
-          title: "Nguồn gốc & Giao thoa",
+          title: "Chương 1: Nguồn gốc & Giao thoa",
           summary: "Tìm hiểu lịch sử từ 'tín ngưỡng thờ lửa' nguyên thủy nhất của nhân loại, sự giao thoa với tín ngưỡng Táo Quân Trung Hoa và sự phát triển độc lập của Việt Nam.",
           image: "/origin.png",
+          link: "https://heyzine.com/flip-book/cadce47698.html#page/4",
         },
         legends: {
           title: "Truyền thuyết & Giá trị văn hóa",
           summary: "Truyền thuyết cảm động về 'Hai ông một bà'. Giải thích về sợi dây liên kết bền chặt giữa vợ chồng và tinh thần 'Tình' mà người Việt trân trọng.",
           image: "/legends.png",
+          link: "https://heyzine.com/flip-book/cadce47698.html#page/12",
         },
         rituals: {
-          title: "Nghi lễ Bắc, Trung, Nam",
+          title: "Chương 2: Nghi lễ Bắc, Trung, Nam",
           summary: "Cách tiễn Ông Táo khác nhau theo từng vùng miền. So sánh sự đa dạng văn hóa qua cá chép miền Bắc, ngựa giấy miền Trung và lễ vật ngọt miền Nam.",
           image: "/rituals.png",
+          link: "https://heyzine.com/flip-book/cadce47698.html#page/22",
         },
         contemporary: {
-          title: "Ông Táo trong xã hội hiện đại",
+          title: "Chương 3: Ông Táo trong xã hội hiện đại",
           summary: "Khám phá cách tín ngưỡng Ông Táo thay đổi hình thức trong thời đại đô thị hóa và số hóa, nhưng vẫn tồn tại như một sợi dây gắn kết gia đình.",
           image: "/modern.png",
+          link: "https://heyzine.com/flip-book/cadce47698.html#page/42",
         },
       },
     },

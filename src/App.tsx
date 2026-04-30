@@ -11,7 +11,7 @@ import { Language } from './types';
 
 export default function App() {
   const [lang, setLang] = useState<Language>('jp');
-  const [activeSection, setActiveSection] = useState<string>('intro');
+  const [activeSection, setActiveSection] = useState<string>('origin');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -227,7 +227,7 @@ export default function App() {
             <div className="w-24 h-1 bg-cultural-gold mx-auto rounded-full" />
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-4 mb-12">
+          <div className="grid lg:grid-cols-4 gap-4 mb-12">
             {(Object.keys(t.overview.sections) as Array<keyof typeof t.overview.sections>).map((key) => {
               const section = t.overview.sections[key];
               return (
@@ -269,16 +269,34 @@ export default function App() {
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
                   {t.overview.sections[activeSection as keyof typeof t.overview.sections].summary}
                 </p>
-                <div className="flex items-center gap-4 text-cultural-gold font-bold uppercase tracking-widest text-[10px]">
-                  <div className="w-12 h-px bg-cultural-gold" />
+                <a 
+                  href={t.overview.sections[activeSection as keyof typeof t.overview.sections].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-cultural-gold hover:text-cultural-red font-bold uppercase tracking-widest text-[10px] transition-colors group/link"
+                >
+                  <div className="w-12 h-px bg-cultural-gold group-hover/link:bg-cultural-red transition-colors" />
                   詳細を読む / Đọc chi tiết trong sách
-                </div>
+                  <ExternalLink size={12} className="opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                </a>
               </div>
-              <div className="min-h-[400px] md:min-h-[600px] relative bg-gray-50">
+              <div className="min-h-[400px] md:min-h-[600px] relative bg-gray-50 group/image">
+                <a 
+                  href={t.overview.sections[activeSection as keyof typeof t.overview.sections].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 z-10"
+                >
+                  <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/5 transition-colors flex items-center justify-center">
+                    <span className="opacity-0 group-hover/image:opacity-100 bg-cultural-red text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg transition-opacity flex items-center gap-2">
+                       {t.hero.readButton} <ExternalLink size={12} />
+                    </span>
+                  </div>
+                </a>
                 <img 
                   src={t.overview.sections[activeSection as keyof typeof t.overview.sections].image} 
                   alt="Section preview" 
-                  className="absolute inset-0 w-full h-full object-contain p-4"
+                  className="absolute inset-0 w-full h-full object-contain p-4 transition-transform duration-500 group-hover/image:scale-[1.02]"
                   onError={(e) => {
                     e.currentTarget.src = `https://picsum.photos/seed/${activeSection}/800/1000`;
                   }}

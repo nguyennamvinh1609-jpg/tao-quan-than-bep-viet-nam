@@ -4,6 +4,7 @@ export interface ContentSection {
   title: string;
   summary: string;
   image: string;
+  link: string;
 }
 
 export interface SiteContent {
@@ -29,7 +30,6 @@ export interface SiteContent {
   overview: {
     title: string;
     sections: {
-      intro: ContentSection;
       origin: ContentSection;
       legends: ContentSection;
       rituals: ContentSection;
